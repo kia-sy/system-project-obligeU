@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ObligeU</title>
+        <link rel="stylesheet" type="text/css" href="obligeU.css">
+    </head>
+    <body>
+        
+        <div id="authPage" class="page">
+
+            <div class="background-shape shape-one"></div>
+            <div class="background-shape shape-two"></div>
+            <div class="background-shape shape-three"></div>
+
+            <div class="auth-container" id="authContainer">
+
+                <div class="form-panel login-panel">
+
+                    <div class="form-content">
+
+                        <div class="mobile-logo">
+                            <img src="images/obligeu-logo.png" alt="ObligeU">
+                        </div>  
+
+                        <span class="form-label">WELCOME BACK</span>
+
+                        <h1>Sign In</h1>
+
+                        <p class="form-description">
+                            Sign in to continue to your ObligeU account.
+                        </p>
+
+                        <form id="loginForm">
+
+                            <div class="input-group">
+                            <label>Email Address</label>
+                            <input
+                                type="email"
+                                id="loginEmail"
+                                placeholder="Enter your email"
+                                required
+                            >
+                            </div>
+
+                            <div class="input-group">
+
+                                <div class="password-heading">
+                                    <label>Password</label>
+                                    <button type="button" id="forgotPassword">
+                                        Forgot Password?
+                                    </button>
+                                </div>
+
+                            <input
+                                type="password"
+                                id="loginPassword"
+                                placeholder="Enter your password"
+                                required
+                            >
+
+                            </div>
+
+                            <button type="submit" id="signin" class="main-button">
+                                Sign In
+                            </button>
+
+                        </form>
+
+                        <p class="switch-text">
+                            Don't have an account?
+                            <button type="button" class="switch-button" id="showRegister">
+                                Register
+                            </button>
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-panel register-panel">
+
+                    <div class="form-content">
+
+                        <div class="mobile-logo">
+                            <img src="images/obligeu-logo.png" alt="ObligeU">
+                        </div>
+
+                        <span class="form-label">JOIN OBLIGEU</span>
+
+                        <h1>Create Account</h1>
+
+                        <p class="form-description">
+                            Create your account and become part of the student network.
+                        </p>
+
+                        <form id="registerForm" action="register" method="POST">
+
+                            <div class="name-row">
+
+                                <div class="input-group">
+                                    <label>First Name</label>
+                                    <input
+                                        type="text"
+                                        id="firstName"
+                                        placeholder="First name"
+                                        name="firstName"
+                                        required
+                                    >
+                                </div>
+
+                                <div class="input-group">
+                                    <label>Last Name</label>
+                                    <input
+                                        type="text"
+                                        id="lastName"
+                                        placeholder="Last name"
+                                        name="lastName"
+                                        required
+                                    >
+                                </div>
+
+                            </div>
+
+                            <div class="input-group">
+                                <label>Student Email</label>
+                                <input
+                                    type="email"
+                                    id="registerEmail"
+                                    placeholder="Enter your email"
+                                    name="email"
+                                    required
+                                >
+                            </div>
+
+                            <div class="input-group">
+                                <label>Password</label>
+                                <input
+                                    type="password"
+                                    id="registerPassword"
+                                    placeholder="Create a password"
+                                    name="password"
+                                    required
+                                >   
+                            </div>
+
+                            <div class="input-group">
+                                <label>Confirm Password</label>
+                                <input
+                                    type="password"
+                                    id="confirmPassword"
+                                    placeholder="Confirm your password"
+                                    required
+                                >
+                            </div>
+                    
+                            <button type="submit" id="create" class="main-button">
+                                Create Account
+                            </button>
+
+                        </form>
+
+                        <p class="switch-text">
+                            Already have an account?
+                            <button type="button" class="switch-button" id="showLogin">
+                                Sign In
+                            </button>
+                        </p>
+
+                    </div>
+        
+                </div>
+                
+                <div class="welcome-panel">
+
+                    <div class="welcome-circle circle-a"></div>
+                    <div class="welcome-circle circle-b"></div>
+                    <div class="welcome-circle circle-c"></div>
+                    <div class="welcome-circle circle-d"></div>
+
+                    <div class="welcome-content">
+
+                        <img
+                            src="images/obligeu-logo.png"
+                            class="main-logo"
+                            alt="ObligeU Logo"
+                        >
+
+                        <div class="welcome-message login-message">
+
+                            <span>WELCOME TO OBLIGEU</span>
+
+                            <h2>
+                                Ask.<br>
+                                Offer.<br>
+                                Connect.
+                            </h2>
+
+                            <p>
+                                A student-centered space where you can
+                                ask for help, share what you know, and
+                                connect with fellow learners.
+                            </p>
+
+                            <button
+                                type="button"
+                                class="outline-button"
+                                id="welcomeRegister"
+                            >
+                                Create an Account
+                            </button>
+
+                        </div>
+
+
+                        <div class="welcome-message register-message">
+
+                        <span>ALREADY PART OF OBLIGEU?</span>
+
+                        <h2>
+                            Welcome<br>
+                            Back.
+                        </h2>
+
+                        <p>
+                            Continue learning, helping others,
+                            and connecting with fellow students
+                            through ObligeU.
+                        </p>
+
+                        <button
+                            type="button"
+                            class="outline-button"
+                            id="welcomeLogin"
+                        >
+                            Sign In
+                        </button>
+
+                        </div>
+
+                        <div class="welcome-bottom">
+                            <span>ASK</span>
+                            <i></i>
+                            <span>OFFER</span>
+                            <i></i>
+                            <span>CONNECT</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+            
+            <div id="roleModal" class="modal-overlay">
+
+    <div class="announcement-modal role-modal">
+
+        <span class="panel-label">ALMOST DONE</span>
+
+        <h2>Who are you joining as?</h2>
+
+        <p>Choose the option that best describes you.</p>
+
+        <div class="role-choices">
+
+            <button type="button" class="role-choice" data-role="student">
+                <strong>Student</strong>
+                <small>Ask for help and share what you know.</small>
+            </button>
+
+            <button type="button" class="role-choice" data-role="organization">
+                <strong>Organization Member</strong>
+                <small>Represent a student organization.</small>
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+            <div id="toast" class="toast"></div>
+
+        </div>
+        
+        <script src="obligeU.js"></script>
+    </body>
+</html>

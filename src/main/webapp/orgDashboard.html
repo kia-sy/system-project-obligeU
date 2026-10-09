@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ObligeU - Organization</title>
+    <link rel="stylesheet" type="text/css" href="obligeU.css">
+    <link rel="stylesheet" type="text/css" href="orgDashboard.css">
+</head>
+
+<body>
+
+<div id="dashboardPage" class="dashboard-page">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="sidebar-logo">
+            <img src="images/obligeu-logo.png" alt="ObligeU">
+        </div>
+
+        <div class="student-mini-profile">
+            <div class="avatar" id="sidebarAvatar">M</div>
+            <div>
+                <strong id="sidebarName">Mika</strong>
+                <span>Organization Member</span>
+            </div>
+        </div>
+
+        <nav class="navigation">
+            <button class="nav-item active" data-page="dashboard" type="button">
+                <span class="nav-icon">⌂</span> Dashboard
+            </button>
+            <button class="nav-item" data-page="feedback" type="button">
+                <span class="nav-icon">▤</span> Feedback Board
+            </button>
+            <button class="nav-item" data-page="presentations" type="button">
+                <span class="nav-icon">▥</span> Presentations
+            </button>
+            <button class="nav-item" data-page="queue" type="button">
+                <span class="nav-icon">◉</span> Virtual Help Queue
+            </button>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <button class="nav-item" data-page="profile" type="button">
+                <span class="nav-icon">○</span> My Profile
+            </button>
+            <button class="nav-item logout-button" id="logoutButton" type="button">
+                <span class="nav-icon">↪</span> Log Out
+            </button>
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN -->
+    <main class="main-content">
+
+        <header class="topbar">
+
+            <button class="mobile-menu-button" id="mobileMenuButton" type="button" aria-label="Open menu">☰</button>
+
+            <div class="page-title">
+                <span id="topPageLabel">Dashboard</span>
+            </div>
+
+            <div class="topbar-right">
+
+                <button class="notification-button" id="notificationButton" type="button" aria-label="Notifications">
+                    ♡
+                    <span class="notification-dot"></span>
+                </button>
+
+                <div class="top-profile">
+                    <div class="top-avatar" id="topAvatar">M</div>
+                    <div>
+                        <strong id="topName">Mika</strong>
+                        <span>Organization Member</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <section class="content-area">
+
+
+            <!-- DASHBOARD HOME -->
+            <div id="dashboardSection" class="content-section active-section">
+
+                <div class="welcome-banner">
+                    <div>
+                        <span class="banner-small">OBLIGEU ORGANIZATION PORTAL</span>
+                        <h1>Good afternoon, <span id="welcomeName">Mika</span></h1>
+                        <p>Students are waiting for answers. Here is what needs you today.</p>
+                    </div>
+                    <div class="banner-decoration">
+                        <div></div><div></div><div></div>
+                    </div>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-card purple-card">
+                        <div class="stat-icon">?</div>
+                        <span>Open Feedback Requests</span>
+                        <strong>7</strong>
+                        <small>Waiting for an answer</small>
+                    </div>
+                    <div class="stat-card green-card">
+                        <div class="stat-icon">✓</div>
+                        <span>Answered This Week</span>
+                        <strong>24</strong>
+                        <small>By all members</small>
+                    </div>
+                    <div class="stat-card pink-card">
+                        <div class="stat-icon">◉</div>
+                        <span>Virtual Help Queue</span>
+                        <strong>3</strong>
+                        <small>Anonymous requests waiting</small>
+                    </div>
+                    <div class="stat-card yellow-card">
+                        <div class="stat-icon">▥</div>
+                        <span>Presentations</span>
+                        <strong id="statPresentations">12</strong>
+                        <small>Published for students</small>
+                    </div>
+                </div>
+
+                <div class="dashboard-grid">
+
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <div>
+                                <span class="panel-label">NEEDS AN ANSWER</span>
+                                <h2>Latest Feedback Requests</h2>
+                            </div>
+                            <button class="view-button" data-page="feedback" type="button">View All</button>
+                        </div>
+
+                        <div class="announcement-list">
+                            <button class="announcement-item pink-item" data-page="feedback" type="button">
+                                <div class="announcement-date"><strong>2</strong><span>HRS</span></div>
+                                <div>
+                                    <strong>Java ArrayList</strong>
+                                    <p>Nicola needs feedback on looping through a list.</p>
+                                </div>
+                                <span class="arrow">›</span>
+                            </button>
+                            <button class="announcement-item purple-item" data-page="feedback" type="button">
+                                <div class="announcement-date"><strong>5</strong><span>HRS</span></div>
+                                <div>
+                                    <strong>SQL Joins</strong>
+                                    <p>Jae is unsure which join to use.</p>
+                                </div>
+                                <span class="arrow">›</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <div>
+                                <span class="panel-label">GET STARTED</span>
+                                <h2>Quick Actions</h2>
+                            </div>
+                        </div>
+
+                        <div class="quick-actions">
+                            <button class="quick-action ask-action" data-page="feedback" type="button">
+                                <span>?</span>
+                                <div><strong>Answer Feedback</strong><small>Comment on a student's request.</small></div>
+                                <b>›</b>
+                            </button>
+                            <button class="quick-action offer-action" data-page="presentations" type="button">
+                                <span>+</span>
+                                <div><strong>Add a Presentation</strong><small>Publish slides for a topic.</small></div>
+                                <b>›</b>
+                            </button>
+                            <button class="quick-action virtual-action" data-page="queue" type="button">
+                                <span>◉</span>
+                                <div><strong>Join a Call</strong><small>Help a student live.</small></div>
+                                <b>›</b>
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- FEEDBACK BOARD -->
+            <div id="feedbackSection" class="content-section">
+
+                <div class="section-header">
+                    <span class="panel-label">OPEN TO EVERY MEMBER</span>
+                    <h1>Feedback Board</h1>
+                    <p>Every member can see these requests, and anyone can answer.</p>
+                </div>
+
+                <article class="thread">
+                    <div class="thread-head">
+                        <div class="thread-avatar">N</div>
+                        <div class="thread-meta">
+                            <strong>Nicola</strong>
+                            <span class="chip student">Student</span>
+                            <small>2 hours ago</small>
+                        </div>
+                        <span class="status pending">Open</span>
+                    </div>
+                    <p class="thread-text">I read the ArrayList presentation but I am still not sure how to loop through my list when items get added later. Can someone check my approach?</p>
+                    <div class="thread-tags">
+                        <span class="chip topic">Java ArrayList</span>
+                        <span class="comment-count">1 comment</span>
+                    </div>
+                    <div class="comment-list">
+                        <div class="comment">
+                            <div class="thread-avatar small">A</div>
+                            <div>
+                                <div class="comment-meta"><strong>Ana P.</strong><span class="chip member">Organization Member</span><small>20 min ago</small></div>
+                                <p>Slide 7 of the presentation has a full example of looping with size().</p>
+                            </div>
+                        </div>
+                    </div>
+                    <form class="comment-form">
+                        <input type="text" placeholder="Write a comment..." required>
+                        <button type="submit" class="submit-button">Comment</button>
+                    </form>
+                </article>
+
+                <article class="thread">
+                    <div class="thread-head">
+                        <div class="thread-avatar">J</div>
+                        <div class="thread-meta">
+                            <strong>Jae</strong>
+                            <span class="chip student">Student</span>
+                            <small>5 hours ago</small>
+                        </div>
+                        <span class="status pending">Open</span>
+                    </div>
+                    <p class="thread-text">When should I use a LEFT JOIN instead of an INNER JOIN? My results keep missing some rows.</p>
+                    <div class="thread-tags">
+                        <span class="chip topic">SQL Joins</span>
+                        <span class="comment-count">0 comments</span>
+                    </div>
+                    <div class="comment-list"></div>
+                    <form class="comment-form">
+                        <input type="text" placeholder="Write a comment..." required>
+                        <button type="submit" class="submit-button">Comment</button>
+                    </form>
+                </article>
+
+            </div>
+
+
+            <!-- PRESENTATIONS -->
+            <div id="presentationsSection" class="content-section">
+
+                <div class="section-header">
+                    <span class="panel-label">FOR STUDENTS</span>
+                    <h1>Presentations</h1>
+                    <p>Students are matched to these slides when they ask for help.</p>
+                </div>
+
+                <div class="form-card offer-card">
+                    <div class="offer-intro">
+                        <div class="big-icon">+</div>
+                        <div>
+                            <h2>Add a Presentation</h2>
+                            <p>Add keywords so the system can match it to student requests.</p>
+                        </div>
+                    </div>
+
+                    <form id="presentationForm">
+                        <div class="form-grid">
+                            <div class="field">
+                                <label for="presTitle">Title</label>
+                                <input type="text" id="presTitle" placeholder="Example: Java ArrayList" required>
+                            </div>
+                            <div class="field">
+                                <label for="presSubject">Subject</label>
+                                <select id="presSubject" required>
+                                    <option value="">Select subject</option>
+                                    <option>Programming</option>
+                                    <option>Database</option>
+                                    <option>Mathematics</option>
+                                    <option>Web Development</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label for="presKeywords">Keywords for matching</label>
+                            <input type="text" id="presKeywords" placeholder="arraylist, list, collections" required>
+                        </div>
+                        <div class="field">
+                            <label for="presFile">Slides (.pptx)</label>
+                            <input type="file" id="presFile" accept=".ppt,.pptx" required>
+                        </div>
+                        <button type="submit" class="submit-button green-submit">Publish presentation</button>
+                    </form>
+                </div>
+
+                <div class="materials-grid" id="presentationGrid">
+                    <div class="material-card">
+                        <div class="material-top purple-material"><span>CS</span></div>
+                        <div class="material-body">
+                            <span>PROGRAMMING</span>
+                            <h3>Java ArrayList</h3>
+                            <p>12 slides. Adding, reading and looping.</p>
+                            <button class="material-button" type="button">Edit</button>
+                        </div>
+                    </div>
+                    <div class="material-card">
+                        <div class="material-top green-material"><span>DB</span></div>
+                        <div class="material-body">
+                            <span>DATABASE</span>
+                            <h3>SQL Fundamentals</h3>
+                            <p>18 slides. Queries, tables and joins.</p>
+                            <button class="material-button" type="button">Edit</button>
+                        </div>
+                    </div>
+                    <div class="material-card">
+                        <div class="material-top pink-material"><span>DS</span></div>
+                        <div class="material-body">
+                            <span>MATHEMATICS</span>
+                            <h3>Probability Reviewer</h3>
+                            <p>9 slides. Sample spaces and events.</p>
+                            <button class="material-button" type="button">Edit</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- VIRTUAL HELP QUEUE -->
+            <div id="queueSection" class="content-section">
+
+                <div class="section-header">
+                    <span class="panel-label">ANONYMOUS REQUESTS</span>
+                    <h1>Virtual Help Queue</h1>
+                    <p>Students stay anonymous until they join the call.</p>
+                </div>
+
+                <div class="panel">
+                    <div class="request-table">
+                        <div class="request-row table-header">
+                            <span>Request</span>
+                            <span>Topic</span>
+                            <span>Waiting</span>
+                            <span>Action</span>
+                        </div>
+                        <div class="request-row">
+                            <span>Anonymous student #1042</span>
+                            <span>Database normalization</span>
+                            <span>12 min</span>
+                            <button class="view-button join-call" type="button">Join call</button>
+                        </div>
+                        <div class="request-row">
+                            <span>Anonymous student #1043</span>
+                            <span>Java inheritance</span>
+                            <span>8 min</span>
+                            <button class="view-button join-call" type="button">Join call</button>
+                        </div>
+                        <div class="request-row">
+                            <span>Anonymous student #1044</span>
+                            <span>Probability exercise</span>
+                            <span>3 min</span>
+                            <button class="view-button join-call" type="button">Join call</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- PROFILE -->
+            <div id="profileSection" class="content-section">
+
+                <div class="section-header">
+                    <span class="panel-label">ACCOUNT</span>
+                    <h1>My Profile</h1>
+                    <p>Your ObligeU organization profile.</p>
+                </div>
+
+                <div class="profile-layout">
+                    <div class="profile-main">
+                        <div class="profile-cover"></div>
+                        <div class="profile-content">
+                            <div class="profile-avatar" id="profileAvatar">M</div>
+                            <h2 id="profileName">Mika</h2>
+                            <p id="profileEmail">member@obligeu.edu</p>
+                            <span class="profile-role">ORGANIZATION MEMBER</span>
+                        </div>
+                    </div>
+                    <div class="profile-side">
+                        <div class="profile-stat"><span>ANSWERS GIVEN</span><strong>24</strong></div>
+                        <div class="profile-stat"><span>PRESENTATIONS</span><strong>3</strong></div>
+                        <div class="profile-stat"><span>CALLS JOINED</span><strong>5</strong></div>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<!-- NOTIFICATIONS -->
+<div id="notificationPanel" class="notification-panel">
+
+    <div class="notification-header">
+        <div>
+            <span class="panel-label">UPDATES</span>
+            <h3>Notifications</h3>
+        </div>
+        <button id="closeNotifications" type="button" aria-label="Close notifications">×</button>
+    </div>
+
+    <div class="notification-item">
+        <span class="notification-dot purple-dot"></span>
+        <div><strong>New feedback request</strong><p>Nicola asked about Java ArrayList.</p></div>
+    </div>
+    <div class="notification-item">
+        <span class="notification-dot pink-dot"></span>
+        <div><strong>Student waiting</strong><p>An anonymous video call has waited 12 minutes.</p></div>
+    </div>
+
+</div>
+
+<div id="dashboardToast" class="toast"></div>
+
+<script src="orgDashboard.js"></script>
+
+</body>
+</html>

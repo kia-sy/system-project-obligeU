@@ -1,0 +1,2082 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ObligeU</title>
+    <link rel="stylesheet" type="text/css" href="obligeU.css">
+</head>
+
+<body>
+    
+<!-- =========================================================
+     DASHBOARD
+     ========================================================= -->
+
+<div
+    id="dashboardPage"
+    class="dashboard-page"
+>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="sidebar-logo">
+
+            <img
+                src="images/obligeu-logo.png"
+                alt="ObligeU"
+            >
+
+        </div>
+
+
+        <!-- USER -->
+        <div class="student-mini-profile">
+
+            <div
+                class="avatar"
+                id="sidebarAvatar"
+            >
+                N
+            </div>
+
+            <div>
+
+                <strong id="sidebarName">
+                    Nicola
+                </strong>
+
+                <span>
+                    Student
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- NAVIGATION -->
+        <nav class="navigation">
+
+            <button
+                class="nav-item active"
+                data-page="dashboard"
+            >
+
+                <span class="nav-icon">
+                    ⌂
+                </span>
+
+                Dashboard
+
+            </button>
+
+
+            <button
+                class="nav-item"
+                data-page="bulletin"
+            >
+
+                <span class="nav-icon">
+                    ▤
+                </span>
+
+                Bulletin Board
+
+            </button>
+
+
+            <button
+                class="nav-item"
+                data-page="ask"
+            >
+
+                <span class="nav-icon">
+                    ?
+                </span>
+
+                Ask for Help
+
+            </button>
+
+
+            <button
+                class="nav-item"
+                data-page="offer"
+            >
+
+                <span class="nav-icon">
+                    +
+                </span>
+
+                Offer Help
+
+            </button>
+
+
+            <button
+                class="nav-item"
+                data-page="virtual"
+            >
+
+                <span class="nav-icon">
+                    ◉
+                </span>
+
+                Virtual Help
+
+            </button>
+
+
+            <button
+                class="nav-item"
+                data-page="materials"
+            >
+
+                <span class="nav-icon">
+                    ▥
+                </span>
+
+                Learning Materials
+
+            </button>
+
+
+            <button
+                class="nav-item"
+                data-page="requests"
+            >
+
+                <span class="nav-icon">
+                    ✓
+                </span>
+
+                My Requests
+
+            </button>
+
+        </nav>
+
+
+        <!-- SIDEBAR BOTTOM -->
+        <div class="sidebar-bottom">
+
+            <button
+                class="nav-item"
+                data-page="profile"
+            >
+
+                <span class="nav-icon">
+                    ○
+                </span>
+
+                My Profile
+
+            </button>
+
+
+            <button
+                class="nav-item logout-button"
+                id="logoutButton"
+            >
+
+                <span class="nav-icon">
+                    ↪
+                </span>
+
+                Log Out
+
+            </button>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- MAIN -->
+    <main class="main-content">
+
+
+        <!-- TOPBAR -->
+        <header class="topbar">
+
+            <button
+                class="mobile-menu-button"
+                id="mobileMenuButton"
+                type="button"
+                aria-label="Open menu"
+            >
+                ☰
+            </button>
+
+
+            <div class="page-title">
+
+                <span id="topPageLabel">
+                    Dashboard
+                </span>
+
+            </div>
+
+
+            <div class="topbar-right">
+
+                <button
+                    class="notification-button"
+                    id="notificationButton"
+                    type="button"
+                    aria-label="Notifications"
+                >
+
+                    ♡
+
+                    <span class="notification-dot"></span>
+
+                </button>
+
+
+                <div class="top-profile">
+
+                    <div
+                        class="top-avatar"
+                        id="topAvatar"
+                    >
+                        N
+                    </div>
+
+                    <div>
+
+                        <strong id="topName">
+                            Nicola
+                        </strong>
+
+                        <span>
+                            Student
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- CONTENT -->
+        <section class="content-area">
+
+
+            <!-- =================================================
+                 DASHBOARD HOME
+                 ================================================= -->
+
+            <div
+                id="dashboardSection"
+                class="content-section active-section"
+            >
+
+                <div class="welcome-banner">
+
+                    <div>
+
+                        <span class="banner-small">
+                            OBLIGEU STUDENT PORTAL
+                        </span>
+
+                        <h1>
+
+                            Good afternoon,
+                            <span id="welcomeName">
+                                Nicola
+                            </span>
+
+                        </h1>
+
+                        <p>
+                            What would you like to do today?
+                        </p>
+
+                    </div>
+
+
+                    <div class="banner-decoration">
+
+                        <div></div>
+                        <div></div>
+                        <div></div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- QUICK ACTIONS -->
+                <div class="dashboard-grid">
+
+                    <div class="panel">
+
+                        <div class="panel-heading">
+
+                            <div>
+
+                                <span class="panel-label">
+                                    GET STARTED
+                                </span>
+
+                                <h2>
+                                    What do you need?
+                                </h2>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="quick-actions">
+
+                            <button
+                                class="quick-action ask-action"
+                                data-page="ask"
+                            >
+
+                                <span>
+                                    ?
+                                </span>
+
+                                <div>
+
+                                    <strong>
+                                        Ask for Help
+                                    </strong>
+
+                                    <small>
+                                        Need help with a topic?
+                                    </small>
+
+                                </div>
+
+                                <b>
+                                    →
+                                </b>
+
+                            </button>
+
+
+                            <button
+                                class="quick-action offer-action"
+                                data-page="offer"
+                            >
+
+                                <span>
+                                    +
+                                </span>
+
+                                <div>
+
+                                    <strong>
+                                        Offer Help
+                                    </strong>
+
+                                    <small>
+                                        Share something you know.
+                                    </small>
+
+                                </div>
+
+                                <b>
+                                    →
+                                </b>
+
+                            </button>
+
+
+                            <button
+                                class="quick-action virtual-action"
+                                data-page="virtual"
+                            >
+
+                                <span>
+                                    ◉
+                                </span>
+
+                                <div>
+
+                                    <strong>
+                                        Virtual Help
+                                    </strong>
+
+                                    <small>
+                                        Request a guided session.
+                                    </small>
+
+                                </div>
+
+                                <b>
+                                    →
+                                </b>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- ANNOUNCEMENTS -->
+                    <div class="panel">
+
+                        <div class="panel-heading">
+
+                            <div>
+
+                                <span class="panel-label">
+                                    UPDATES
+                                </span>
+
+                                <h2>
+                                    Latest News
+                                </h2>
+
+                            </div>
+
+                            <button
+                                class="view-button"
+                                data-page="bulletin"
+                            >
+                                View All
+                            </button>
+
+                        </div>
+
+
+                        <div class="announcement-list">
+
+                            <button
+                                class="announcement-item pink-item"
+                                data-announcement="Virtual Help Schedule"
+                            >
+
+                                <div class="announcement-date">
+
+                                    <strong>
+                                        25
+                                    </strong>
+
+                                    <span>
+                                        SEP
+                                    </span>
+
+                                </div>
+
+                                <div>
+
+                                    <strong>
+                                        Virtual Help Schedule
+                                    </strong>
+
+                                    <p>
+                                        New schedules available.
+                                    </p>
+
+                                </div>
+
+                                <span class="arrow">
+                                    →
+                                </span>
+
+                            </button>
+
+
+                            <button
+                                class="announcement-item purple-item"
+                                data-announcement="Midterm Examination Schedule"
+                            >
+
+                                <div class="announcement-date">
+
+                                    <strong>
+                                        28
+                                    </strong>
+
+                                    <span>
+                                        SEP
+                                    </span>
+
+                                </div>
+
+                                <div>
+
+                                    <strong>
+                                        Midterm Examination
+                                    </strong>
+
+                                    <p>
+                                        Updated exam schedule.
+                                    </p>
+
+                                </div>
+
+                                <span class="arrow">
+                                    →
+                                </span>
+
+                            </button>
+
+
+                            <button
+                                class="announcement-item green-item"
+                                data-announcement="Learning Materials Update"
+                            >
+
+                                <div class="announcement-date">
+
+                                    <strong>
+                                        27
+                                    </strong>
+
+                                    <span>
+                                        SEP
+                                    </span>
+
+                                </div>
+
+                                <div>
+
+                                    <strong>
+                                        Learning Materials
+                                    </strong>
+
+                                    <p>
+                                        New resources added.
+                                    </p>
+
+                                </div>
+
+                                <span class="arrow">
+                                    →
+                                </span>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- RECENT REQUESTS -->
+                <div class="panel recent-panel">
+
+                    <div class="panel-heading">
+
+                        <div>
+
+                            <span class="panel-label">
+                                ACTIVITY
+                            </span>
+
+                            <h2>
+                                Recent Requests
+                            </h2>
+
+                        </div>
+
+                        <button
+                            class="view-button"
+                            data-page="requests"
+                        >
+                            View All
+                        </button>
+
+                    </div>
+
+
+                    <div class="request-table">
+
+                        <div class="request-row table-header">
+
+                            <span>
+                                Topic
+                            </span>
+
+                            <span>
+                                Category
+                            </span>
+
+                            <span>
+                                Date
+                            </span>
+
+                            <span>
+                                Status
+                            </span>
+
+                        </div>
+
+
+                        <div class="request-row">
+
+                            <span>
+                                Database Normalization
+                            </span>
+
+                            <span>
+                                Database
+                            </span>
+
+                            <span>
+                                Sep 27
+                            </span>
+
+                            <span class="status pending">
+                                Pending
+                            </span>
+
+                        </div>
+
+
+                        <div class="request-row">
+
+                            <span>
+                                Java ArrayList
+                            </span>
+
+                            <span>
+                                Programming
+                            </span>
+
+                            <span>
+                                Sep 24
+                            </span>
+
+                            <span class="status resolved">
+                                Resolved
+                            </span>
+
+                        </div>
+
+
+                        <div class="request-row">
+
+                            <span>
+                                Probability Exercise
+                            </span>
+
+                            <span>
+                                Mathematics
+                            </span>
+
+                            <span>
+                                Sep 21
+                            </span>
+
+                            <span class="status resolved">
+                                Resolved
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 BULLETIN
+                 ================================================= -->
+
+            <div
+                id="bulletinSection"
+                class="content-section"
+            >
+
+                <div class="section-header">
+
+                    <div>
+
+                        <span class="panel-label">
+                            STAY UPDATED
+                        </span>
+
+                        <h1>
+                            Bulletin Board
+                        </h1>
+
+                        <p>
+                            Important announcements and updates.
+                        </p>
+
+                    </div>
+
+
+                    <div class="search-box">
+
+                        <input
+                            type="text"
+                            id="announcementSearch"
+                            placeholder="Search announcements..."
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="bulletin-grid">
+
+
+                    <!-- ANNOUNCEMENT 1 -->
+                    <article
+                        class="large-announcement announcement-purple"
+                    >
+
+                        <span class="announcement-tag">
+                            ACADEMIC
+                        </span>
+
+                        <h2>
+                            Midterm Examination Schedule
+                        </h2>
+
+                        <p>
+                            The updated examination schedule is now available.
+                            Students are encouraged to check their subjects,
+                            dates, and assigned rooms.
+                        </p>
+
+                        <div class="announcement-footer">
+
+                            <span>
+                                September 28, 2026
+                            </span>
+
+                            <button
+                                class="read-button"
+                                data-announcement="Midterm Examination Schedule"
+                            >
+                                Read More
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- ANNOUNCEMENT 2 -->
+                    <article
+                        class="large-announcement announcement-green"
+                    >
+
+                        <span class="announcement-tag">
+                            SYSTEM
+                        </span>
+
+                        <h2>
+                            Learning Materials Update
+                        </h2>
+
+                        <p>
+                            New learning materials have been added to the
+                            system for selected Computer Science subjects.
+                        </p>
+
+                        <div class="announcement-footer">
+
+                            <span>
+                                September 27, 2026
+                            </span>
+
+                            <button
+                                class="read-button"
+                                data-announcement="Learning Materials Update"
+                            >
+                                Read More
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- ANNOUNCEMENT 3 -->
+                    <article
+                        class="large-announcement announcement-pink"
+                    >
+
+                        <span class="announcement-tag">
+                            VIRTUAL HELP
+                        </span>
+
+                        <h2>
+                            Virtual Help Schedule
+                        </h2>
+
+                        <p>
+                            New virtual help schedules are available for
+                            students who need assistance with selected topics.
+                        </p>
+
+                        <div class="announcement-footer">
+
+                            <span>
+                                September 25, 2026
+                            </span>
+
+                            <button
+                                class="read-button"
+                                data-announcement="Virtual Help Schedule"
+                            >
+                                Read More
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- ANNOUNCEMENT 4 -->
+                    <article
+                        class="large-announcement announcement-yellow"
+                    >
+
+                        <span class="announcement-tag">
+                            REMINDER
+                        </span>
+
+                        <h2>
+                            Keep Your Requests Organized
+                        </h2>
+
+                        <p>
+                            Please provide a clear topic and description when
+                            submitting a help request.
+                        </p>
+
+                        <div class="announcement-footer">
+
+                            <span>
+                                September 23, 2026
+                            </span>
+
+                            <button
+                                class="read-button"
+                                data-announcement="Keep Your Requests Organized"
+                            >
+                                Read More
+                            </button>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 ASK FOR HELP
+                 ================================================= -->
+
+            <div
+                id="askSection"
+                class="content-section"
+            >
+
+                <div class="section-header">
+
+                    <span class="panel-label">
+                        REQUEST SUPPORT
+                    </span>
+
+                    <h1>
+                        Ask for Help
+                    </h1>
+
+                    <p>
+                        Tell the community what topic you need help with.
+                    </p>
+
+                </div>
+
+
+                <div class="form-card">
+
+                    <form id="helpRequestForm">
+
+                        <div class="form-card-title">
+
+                            <div class="form-card-icon">
+                                ?
+                            </div>
+
+                            <div>
+
+                                <h2>
+                                    Create a Help Request
+                                </h2>
+
+                                <p>
+                                    Provide enough information so a suitable
+                                    helper can understand your concern.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-grid">
+
+                            <div class="field">
+
+                                <label for="helpSubject">
+                                    Subject
+                                </label>
+
+                                <select
+                                    id="helpSubject"
+                                    required
+                                >
+
+                                    <option value="">
+                                        Select subject
+                                    </option>
+
+                                    <option>
+                                        Programming
+                                    </option>
+
+                                    <option>
+                                        Database
+                                    </option>
+
+                                    <option>
+                                        Mathematics
+                                    </option>
+
+                                    <option>
+                                        Web Development
+                                    </option>
+
+                                    <option>
+                                        Computer Science
+                                    </option>
+
+                                    <option>
+                                        Other
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="field">
+
+                                <label for="helpTopic">
+                                    Topic
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="helpTopic"
+                                    placeholder="Example: Java ArrayList"
+                                    required
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="field">
+
+                            <label for="helpDescription">
+                                Describe Your Concern
+                            </label>
+
+                            <textarea
+                                id="helpDescription"
+                                placeholder="Explain what you are having difficulty with..."
+                                required
+                            ></textarea>
+
+                        </div>
+
+
+                        <button
+                            type="submit"
+                            class="submit-button"
+                        >
+                            Submit Help Request
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 OFFER HELP
+                 ================================================= -->
+
+            <div
+                id="offerSection"
+                class="content-section"
+            >
+
+                <div class="section-header">
+
+                    <span class="panel-label">
+                        SHARE YOUR KNOWLEDGE
+                    </span>
+
+                    <h1>
+                        Offer Help
+                    </h1>
+
+                    <p>
+                        Let other students know what topics you can help with.
+                    </p>
+
+                </div>
+
+
+                <div class="form-card offer-card">
+
+                    <div class="offer-intro">
+
+                        <div class="big-icon">
+                            +
+                        </div>
+
+                        <div>
+
+                            <h2>
+                                Become a Student Helper
+                            </h2>
+
+                            <p>
+                                Share your knowledge with students who need
+                                guidance in subjects or topics you understand.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <form id="offerForm">
+
+                        <div class="form-grid">
+
+                            <div class="field">
+
+                                <label for="offerSubject">
+                                    Subject
+                                </label>
+
+                                <select
+                                    id="offerSubject"
+                                    required
+                                >
+
+                                    <option value="">
+                                        Select subject
+                                    </option>
+
+                                    <option>
+                                        Programming
+                                    </option>
+
+                                    <option>
+                                        Database
+                                    </option>
+
+                                    <option>
+                                        Mathematics
+                                    </option>
+
+                                    <option>
+                                        Web Development
+                                    </option>
+
+                                    <option>
+                                        Computer Science
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="field">
+
+                                <label for="offerTopic">
+                                    Topic You Can Help With
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="offerTopic"
+                                    placeholder="Example: C++ Inheritance"
+                                    required
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="field">
+
+                            <label for="offerDescription">
+                                Short Description
+                            </label>
+
+                            <textarea
+                                id="offerDescription"
+                                placeholder="Describe what you can help students with..."
+                                required
+                            ></textarea>
+
+                        </div>
+
+
+                        <button
+                            type="submit"
+                            class="submit-button green-submit"
+                        >
+                            Submit Helper Profile
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 VIRTUAL HELP
+                 ================================================= -->
+
+            <div
+                id="virtualSection"
+                class="content-section"
+            >
+
+                <div class="section-header">
+
+                    <span class="panel-label">
+                        LIVE GUIDANCE
+                    </span>
+
+                    <h1>
+                        Virtual Help
+                    </h1>
+
+                    <p>
+                        Request a scheduled video session for topics that need
+                        more detailed guidance.
+                    </p>
+
+                </div>
+
+
+                <div class="virtual-layout">
+
+
+                    <div class="virtual-main">
+
+                        <div class="virtual-icon">
+                            ◉
+                        </div>
+
+                        <h2>
+                            Request a Virtual Help Session
+                        </h2>
+
+                        <p>
+                            Submit a request and a suitable helper can be
+                            assigned to your topic. The session can be used
+                            for explanations, demonstrations, and guided
+                            coding.
+                        </p>
+
+
+                        <form id="virtualForm">
+
+                            <div class="form-grid">
+
+                                <div class="field">
+
+                                    <label for="virtualSubject">
+                                        Subject
+                                    </label>
+
+                                    <select
+                                        id="virtualSubject"
+                                        required
+                                    >
+
+                                        <option value="">
+                                            Select subject
+                                        </option>
+
+                                        <option>
+                                            Programming
+                                        </option>
+
+                                        <option>
+                                            Database
+                                        </option>
+
+                                        <option>
+                                            Mathematics
+                                        </option>
+
+                                        <option>
+                                            Web Development
+                                        </option>
+
+                                    </select>
+
+                                </div>
+
+
+                                <div class="field">
+
+                                    <label for="virtualTopic">
+                                        Topic
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        id="virtualTopic"
+                                        placeholder="What do you need help with?"
+                                        required
+                                    >
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="field">
+
+                                <label for="virtualSchedule">
+                                    Preferred Schedule
+                                </label>
+
+                                <input
+                                    type="datetime-local"
+                                    id="virtualSchedule"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <button
+                                type="submit"
+                                class="submit-button"
+                            >
+                                Request Virtual Help
+                            </button>
+
+                        </form>
+
+                    </div>
+
+
+                    <div class="virtual-info">
+
+                        <span class="panel-label">
+                            HOW IT WORKS
+                        </span>
+
+
+                        <div class="step">
+
+                            <strong>
+                                01
+                            </strong>
+
+                            <div>
+
+                                <h3>
+                                    Submit Request
+                                </h3>
+
+                                <p>
+                                    Tell us what topic you need help with.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="step">
+
+                            <strong>
+                                02
+                            </strong>
+
+                            <div>
+
+                                <h3>
+                                    Find a Helper
+                                </h3>
+
+                                <p>
+                                    A suitable student helper can be matched.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="step">
+
+                            <strong>
+                                03
+                            </strong>
+
+                            <div>
+
+                                <h3>
+                                    Join the Session
+                                </h3>
+
+                                <p>
+                                    Receive guidance through a video session.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 LEARNING MATERIALS
+                 ================================================= -->
+
+            <div
+                id="materialsSection"
+                class="content-section"
+            >
+
+                <div class="section-header">
+
+                    <span class="panel-label">
+                        STUDY RESOURCES
+                    </span>
+
+                    <h1>
+                        Learning Materials
+                    </h1>
+
+                    <p>
+                        Browse available study materials and references.
+                    </p>
+
+                </div>
+
+
+                <div class="subject-filter">
+
+                    <button
+                        class="material-filter active"
+                        data-filter="all"
+                        type="button"
+                    >
+                        All
+                    </button>
+
+                    <button
+                        class="material-filter"
+                        data-filter="programming"
+                        type="button"
+                    >
+                        Programming
+                    </button>
+
+                    <button
+                        class="material-filter"
+                        data-filter="database"
+                        type="button"
+                    >
+                        Database
+                    </button>
+
+                    <button
+                        class="material-filter"
+                        data-filter="math"
+                        type="button"
+                    >
+                        Mathematics
+                    </button>
+
+                    <button
+                        class="material-filter"
+                        data-filter="web"
+                        type="button"
+                    >
+                        Web Development
+                    </button>
+
+                </div>
+
+
+                <div class="materials-grid">
+
+
+                    <div
+                        class="material-card"
+                        data-category="programming"
+                    >
+
+                        <div class="material-top purple-material">
+                            <span>
+                                CS
+                            </span>
+                        </div>
+
+                        <div class="material-body">
+
+                            <span>
+                                OBJECT ORIENTED PROGRAMMING
+                            </span>
+
+                            <h3>
+                                Java ArrayList Guide
+                            </h3>
+
+                            <p>
+                                Basic concepts and examples for ArrayList.
+                            </p>
+
+                            <button
+                                class="material-button"
+                                type="button"
+                            >
+                                View Material
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        class="material-card"
+                        data-category="database"
+                    >
+
+                        <div class="material-top green-material">
+
+                            <span>
+                                DB
+                            </span>
+
+                        </div>
+
+                        <div class="material-body">
+
+                            <span>
+                                ADVANCE DATABASE SYSTEM
+                            </span>
+
+                            <h3>
+                                SQL Fundamentals
+                            </h3>
+
+                            <p>
+                                SQL queries, tables, joins, and database basics.
+                            </p>
+
+                            <button
+                                class="material-button"
+                                type="button"
+                            >
+                                View Material
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        class="material-card"
+                        data-category="math"
+                    >
+
+                        <div class="material-top pink-material">
+
+                            <span>
+                                DS
+                            </span>
+
+                        </div>
+
+                        <div class="material-body">
+
+                            <span>
+                                DISCRETE STRUCTURE
+                            </span>
+
+                            <h3>
+                                Probability Reviewer
+                            </h3>
+
+                            <p>
+                                Sample spaces, events, and probability expressions.
+                            </p>
+
+                            <button
+                                class="material-button"
+                                type="button"
+                            >
+                                View Material
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        class="material-card"
+                        data-category="web"
+                    >
+
+                        <div class="material-top blue-material">
+
+                            <span>
+                                WEB
+                            </span>
+
+                        </div>
+
+                        <div class="material-body">
+
+                            <span>
+                                HUMAN COMPUTER INTERACTION
+                            </span>
+
+                            <h3>
+                                HTML & CSS Basics
+                            </h3>
+
+                            <p>
+                                Basic webpage structure and styling concepts.
+                            </p>
+
+                            <button
+                                class="material-button"
+                                type="button"
+                            >
+                                View Material
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 MY REQUESTS
+                 ================================================= -->
+
+            <div
+                id="requestsSection"
+                class="content-section"
+            >
+
+                <div class="section-header">
+
+                    <span class="panel-label">
+                        YOUR ACTIVITY
+                    </span>
+
+                    <h1>
+                        My Requests
+                    </h1>
+
+                    <p>
+                        Track the help requests you have submitted.
+                    </p>
+
+                </div>
+
+
+                <div class="request-card">
+
+                    <div class="request-card-header">
+
+                        <div>
+
+                            <span class="panel-label">
+                                REQUEST HISTORY
+                            </span>
+
+                            <h2>
+                                Your Requests
+                            </h2>
+
+                        </div>
+
+
+                        <button
+                            class="new-request-button"
+                            data-page="ask"
+                            type="button"
+                        >
+                            + New Request
+                        </button>
+
+                    </div>
+
+
+                    <div class="full-request-list">
+
+
+                        <div class="full-request">
+
+                            <div class="request-topic-icon purple-bg">
+                                DB
+                            </div>
+
+                            <div class="request-info">
+
+                                <h3>
+                                    Advance Database System
+                                </h3>
+
+                                <span>
+                                    Database · September 27
+                                </span>
+
+                            </div>
+
+                            <span class="status pending">
+                                Pending
+                            </span>
+
+                        </div>
+
+
+                        <div class="full-request">
+
+                            <div class="request-topic-icon green-bg">
+                                JA
+                            </div>
+
+                            <div class="request-info">
+
+                                <h3>
+                                    Java ArrayList
+                                </h3>
+
+                                <span>
+                                    Programming · September 24
+                                </span>
+
+                            </div>
+
+                            <span class="status resolved">
+                                Resolved
+                            </span>
+
+                        </div>
+
+
+                        <div class="full-request">
+
+                            <div class="request-topic-icon pink-bg">
+                                PR
+                            </div>
+
+                            <div class="request-info">
+
+                                <h3>
+                                    Discrete Structure
+                                </h3>
+
+                                <span>
+                                    Mathematics · September 21
+                                </span>
+
+                            </div>
+
+                            <span class="status resolved">
+                                Resolved
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 PROFILE
+                 ================================================= -->
+
+            <div
+                id="profileSection"
+                class="content-section"
+            >
+
+                <div class="section-header">
+
+                    <span class="panel-label">
+                        ACCOUNT
+                    </span>
+
+                    <h1>
+                        My Profile
+                    </h1>
+
+                    <p>
+                        View and manage your ObligeU profile.
+                    </p>
+
+                </div>
+
+
+                <div class="profile-layout">
+
+
+                    <div class="profile-main">
+
+                        <div class="profile-cover"></div>
+
+
+                        <div class="profile-content">
+
+                            <div
+                                class="profile-avatar"
+                                id="profileAvatar"
+                            >
+                                N
+                            </div>
+
+
+                            <h2 id="profileName">
+                                Nicola
+                            </h2>
+
+
+                            <p id="profileEmail">
+                                student@obligeu.edu
+                            </p>
+
+
+                            <span class="profile-role">
+                                STUDENT
+                            </span>
+
+
+                            <div class="profile-details">
+
+
+                                <div>
+
+                                    <span>
+                                        First Name
+                                    </span>
+
+                                    <strong id="profileFirstName">
+                                        Nicola
+                                    </strong>
+
+                                </div>
+
+
+                                <div>
+
+                                    <span>
+                                        Last Name
+                                    </span>
+
+                                    <strong id="profileLastName">
+                                        Student
+                                    </strong>
+
+                                </div>
+
+
+                                <div>
+
+                                    <span>
+                                        Account Type
+                                    </span>
+
+                                    <strong>
+                                        Student
+                                    </strong>
+
+                                </div>
+
+
+                                <div>
+
+                                    <span>
+                                        Member Since
+                                    </span>
+
+                                    <strong>
+                                        September 2026
+                                    </strong>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="profile-side">
+
+
+                        <div class="profile-stat">
+
+                            <span>
+                                REQUESTS
+                            </span>
+
+                            <strong>
+                                3
+                            </strong>
+
+                        </div>
+
+
+                        <div class="profile-stat">
+
+                            <span>
+                                RESOLVED
+                            </span>
+
+                            <strong>
+                                2
+                            </strong>
+
+                        </div>
+
+
+                        <div class="profile-stat">
+
+                            <span>
+                                HELP OFFERED
+                            </span>
+
+                            <strong>
+                                5
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+
+<!-- =========================================================
+     ANNOUNCEMENT MODAL
+     ========================================================= -->
+
+<div
+    id="announcementModal"
+    class="modal-overlay"
+>
+
+    <div class="announcement-modal">
+
+        <button
+            class="modal-close"
+            id="closeAnnouncement"
+            type="button"
+            aria-label="Close announcement"
+        >
+            ×
+        </button>
+
+
+        <span class="panel-label">
+            ANNOUNCEMENT
+        </span>
+
+
+        <h2 id="modalAnnouncementTitle">
+            Announcement
+        </h2>
+
+
+        <p id="modalAnnouncementText"></p>
+
+
+        <div
+            class="modal-date"
+            id="modalAnnouncementDate"
+        ></div>
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================================================
+     NOTIFICATIONS
+     ========================================================= -->
+
+<div
+    id="notificationPanel"
+    class="notification-panel"
+>
+
+    <div class="notification-header">
+
+        <div>
+
+            <span class="panel-label">
+                UPDATES
+            </span>
+
+            <h3>
+                Notifications
+            </h3>
+
+        </div>
+
+
+        <button
+            id="closeNotifications"
+            type="button"
+            aria-label="Close notifications"
+        >
+            ×
+        </button>
+
+    </div>
+
+
+    <div class="notification-item">
+
+        <span class="notification-dot purple-dot"></span>
+
+        <div>
+
+            <strong>
+                New learning material
+            </strong>
+
+            <p>
+                SQL Fundamentals has been added.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="notification-item">
+
+        <span class="notification-dot green-dot"></span>
+
+        <div>
+
+            <strong>
+                Request update
+            </strong>
+
+            <p>
+                Your Database request is still pending.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="notification-item">
+
+        <span class="notification-dot pink-dot"></span>
+
+        <div>
+
+            <strong>
+                Virtual Help
+            </strong>
+
+            <p>
+                New virtual help schedules are available.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- DASHBOARD TOAST -->
+<div
+    id="dashboardToast"
+    class="toast"
+></div>
+
+<script src="dashboard.js"></script>
+
+</body>
+</html>
