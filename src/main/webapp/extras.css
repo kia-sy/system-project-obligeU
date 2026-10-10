@@ -1,0 +1,263 @@
+/* Shared by orgDashboard.html and studentDashboard.html (load after obligeU.css)
+   Feedback board, uploaded-file cards, and the help-request results. */
+
+/* ---------- feedback threads ---------- */
+.thread {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 24px;
+    margin-bottom: 16px;
+    max-width: 900px;
+    box-shadow: 0 8px 30px rgba(11, 29, 81, .045);
+}
+
+.thread-head { display: flex; align-items: center; gap: 12px; }
+
+.thread-avatar {
+    width: 38px; height: 38px; flex-shrink: 0;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    background: linear-gradient(135deg, var(--purple), var(--green));
+    color: #fff; font-size: 13px; font-weight: 700;
+}
+.thread-avatar.small { width: 32px; height: 32px; font-size: 12px; }
+
+.thread-meta, .comment-meta { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; }
+.thread-meta { flex: 1; }
+.thread-meta strong, .comment-meta strong { font-size: 13px; }
+.thread-meta small, .comment-meta small { color: var(--muted); font-size: 11px; }
+
+.chip { padding: 4px 10px; border-radius: 20px; font-size: 10px; font-weight: 700; }
+.chip.student { background: rgba(188, 122, 249, .16); color: var(--purple-dark); }
+.chip.member  { background: var(--green-soft); color: var(--green-dark); }
+.chip.topic   { background: #F1F5FA; color: var(--text); }
+
+.thread-text {
+    margin: 16px 0 14px;
+    font-size: 14px; line-height: 1.7;
+    white-space: pre-wrap; overflow-wrap: anywhere;
+}
+.thread-tags { display: flex; align-items: center; gap: 12px; }
+.comment-count { font-size: 11px; font-weight: 700; color: var(--muted); }
+
+.comment-list { margin-top: 14px; border-top: 1px solid var(--border); }
+.comment-list:empty { display: none; }
+
+.comment { display: flex; gap: 12px; padding: 14px 0 0; }
+.comment-body { flex: 1; min-width: 0; }
+.comment p {
+    margin-top: 5px; font-size: 13px; line-height: 1.6;
+    white-space: pre-wrap; overflow-wrap: anywhere;
+}
+.comment .delete-button { align-self: flex-start; padding: 5px 10px; font-size: 10px; }
+
+.comment-form { display: flex; gap: 10px; margin-top: 16px; }
+.comment-form input {
+    flex: 1; height: 44px; padding: 0 14px;
+    border: 1px solid var(--border); border-radius: 10px;
+    font-size: 13px; outline: none;
+}
+.comment-form input:focus { border-color: var(--purple); box-shadow: 0 0 0 4px rgba(188, 122, 249, .13); }
+.comment-form .submit-button { height: 44px; }
+
+@media (max-width: 650px) { .comment-form { flex-direction: column; } }
+
+/* student: "post a feedback request" box */
+.feedback-compose { max-width: 900px; margin-bottom: 22px; }
+.feedback-compose .field { margin-bottom: 14px; }
+
+/* ---------- delete button (same look as the news Delete) ---------- */
+.delete-button {
+    display: inline-flex; align-items: center; gap: 6px;
+    border: 1px solid rgba(224, 63, 79, .25);
+    background: #fff; color: var(--pink-dark);
+    border-radius: 999px; padding: 8px 14px;
+    font-size: 11px; font-weight: 700; letter-spacing: .3px;
+    cursor: pointer;
+    transition: background .2s ease, color .2s ease, border-color .2s ease,
+                transform .2s ease, box-shadow .2s ease;
+}
+.delete-button::before {
+    content: ""; width: 13px; height: 13px; background: currentColor;
+    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 6h18M8 6V4h8v2M6 6l1 14h10l1-14M10 11v6M14 11v6'/%3E%3C/svg%3E") center / contain no-repeat;
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 6h18M8 6V4h8v2M6 6l1 14h10l1-14M10 11v6M14 11v6'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+.delete-button:hover {
+    background: var(--pink-dark); border-color: var(--pink-dark); color: #fff;
+    transform: translateY(-2px); box-shadow: 0 6px 14px rgba(224, 63, 79, .28);
+}
+.delete-button:active { transform: scale(.96); box-shadow: none; }
+.delete-button:focus-visible { outline: none; box-shadow: 0 0 0 4px rgba(224, 63, 79, .2); }
+
+/* ---------- org: uploaded files ---------- */
+#presentationGrid { margin-top: 22px; }
+.material-body .file-actions { display: flex; gap: 8px; margin-top: 13px; }
+.material-body .file-actions .material-button { margin-top: 0; flex: 1; }
+.material-body .file-actions .delete-button { height: 34px; padding: 0 12px; border-radius: 7px; }
+.material-body p { overflow-wrap: anywhere; }
+
+/* ---------- student: help-request results ---------- */
+.help-results {
+    margin-top: 26px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+}
+.help-results h3 { font-size: 16px; margin-bottom: 6px; }
+.help-results > p { font-size: 13px; line-height: 1.6; color: var(--muted); margin-bottom: 14px; }
+
+.file-match {
+    display: flex; align-items: center; gap: 14px;
+    padding: 14px 16px; margin-bottom: 10px;
+    border: 1px solid var(--border); border-radius: 14px; background: #fff;
+}
+.file-match-icon {
+    width: 40px; height: 40px; flex-shrink: 0; border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    background: var(--purple-soft); color: var(--purple-dark);
+    font-size: 9px; font-weight: 800; text-transform: uppercase;
+}
+.file-match-info { flex: 1; min-width: 0; }
+.file-match-info strong { display: block; font-size: 13px; overflow-wrap: anywhere; }
+.file-match-info span { font-size: 11px; color: var(--muted); overflow-wrap: anywhere; }
+
+.download-button {
+    flex-shrink: 0; height: 34px; padding: 0 16px;
+    border: none; border-radius: 8px; cursor: pointer;
+    background: var(--green); color: #fff;
+    font-size: 11px; font-weight: 700;
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+.download-button:hover { transform: translateY(-2px); box-shadow: 0 7px 15px rgba(11, 29, 81, .12); }
+
+.no-match {
+    padding: 20px; border-radius: 14px;
+    background: var(--yellow-soft); color: #7A5C0E;
+}
+.no-match strong { display: block; font-size: 14px; margin-bottom: 6px; }
+.no-match p { font-size: 13px; line-height: 1.6; margin-bottom: 14px; }
+
+.link-button {
+    height: 38px; padding: 0 16px;
+    border: 1px solid var(--purple); border-radius: 10px; cursor: pointer;
+    background: #fff; color: var(--purple-dark);
+    font-size: 12px; font-weight: 700;
+    transition: background .2s ease;
+}
+.link-button:hover { background: rgba(188, 122, 249, .12); }
+
+/* ---------- student: My Requests rows with files under them ---------- */
+.full-request.stacked { flex-direction: column; align-items: stretch; gap: 0; }
+.request-line { display: flex; align-items: center; gap: 15px; min-height: 82px; }
+.request-line .request-info { flex: 1; min-width: 0; }
+.request-files { padding: 0 0 16px 60px; }
+.request-files .file-match { padding: 10px 12px; margin-bottom: 8px; }
+@media (max-width: 650px) { .request-files { padding-left: 0; } }
+
+/* ---------- student: "Upload a File" button and pop-up ---------- */
+.section-actions {
+    display: flex; align-items: center; flex-wrap: wrap;
+    gap: 14px; margin-top: 18px;
+}
+.section-actions small { font-size: 11px; color: var(--muted); }
+
+.upload-button {
+    display: inline-flex; align-items: center; gap: 10px;
+    height: 44px; padding: 0 20px 0 8px;
+    border: none; border-radius: 999px; cursor: pointer;
+    color: #fff; font-size: 12px; font-weight: 700;
+    background: linear-gradient(100deg, var(--green-dark), var(--green));
+    box-shadow: 0 8px 20px rgba(129, 145, 47, .22);
+    transition: transform .25s ease, box-shadow .25s ease, filter .25s ease;
+}
+.upload-button span {
+    width: 30px; height: 30px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    background: #fff; color: var(--green-dark);
+    font-size: 15px; font-weight: 800;
+    transition: transform .25s ease;
+}
+.upload-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 26px rgba(129, 145, 47, .30);
+    filter: brightness(1.04);
+}
+.upload-button:hover span { transform: translateY(-2px) scale(1.08); }
+.upload-button:active { transform: scale(.97); }
+.upload-button:focus-visible { outline: none; box-shadow: 0 0 0 4px rgba(145, 208, 108, .35); }
+
+.upload-modal {
+    width: min(560px, 95vw);
+    max-height: 92vh; overflow-y: auto;
+    background:
+        radial-gradient(circle at 100% 0%, rgba(166, 255, 150, .18), transparent 32%),
+        #fff;
+}
+.upload-modal h2 { margin: 10px 0 8px; }
+.upload-modal > p { margin-bottom: 22px; }
+.upload-modal .panel-label { color: var(--green-dark); }
+.upload-modal .field:last-of-type { margin-bottom: 22px; }
+.upload-modal .submit-button { width: 100%; }
+.upload-modal .submit-button:disabled { opacity: .6; cursor: wait; transform: none; }
+
+/* the real file input is hidden; the dashed box below stands in for it */
+.file-input {
+    position: absolute; width: 1px; height: 1px;
+    opacity: 0; pointer-events: none;
+}
+.file-drop {
+    display: flex !important; align-items: center; gap: 14px;
+    margin-bottom: 0 !important; padding: 14px 16px;
+    border: 2px dashed rgba(145, 208, 108, .75); border-radius: 14px;
+    background: var(--green-soft); cursor: pointer;
+    transition: border-color .2s ease, background .2s ease, transform .2s ease;
+}
+.file-drop:hover {
+    border-color: var(--green-dark); background: #fff; transform: translateY(-2px);
+}
+.file-input:focus-visible + .file-drop,
+.file-drop:focus-within { box-shadow: 0 0 0 4px rgba(145, 208, 108, .3); }
+.file-drop-icon {
+    width: 40px; height: 40px; flex-shrink: 0; border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    background: #fff; color: var(--green-dark);
+    font-size: 18px; font-weight: 800;
+}
+.file-drop-text { min-width: 0; }
+.file-drop-text strong {
+    display: block; font-size: 12px; color: var(--dark);
+    overflow-wrap: anywhere;
+}
+.file-drop-text small { display: block; margin-top: 3px; font-size: 10px; color: var(--muted); }
+.file-drop.has-file { border-style: solid; background: #fff; }
+.file-drop.has-file .file-drop-icon { background: var(--green); color: #fff; }
+
+@media (max-width: 650px) {
+    .upload-modal { padding: 24px 20px; }
+    .section-actions { flex-direction: column; align-items: flex-start; }
+}
+
+/* ---------- feedback attachments (pictures and files on posts and comments) ---------- */
+.attachment { margin: 12px 0 4px; max-width: 520px; }
+.attachment img {
+    display: block; max-width: 100%; max-height: 320px;
+    border-radius: 12px; border: 1px solid var(--border);
+}
+.attachment.file-match { margin-bottom: 4px; }
+a.download-button { display: inline-flex; align-items: center; text-decoration: none; }
+
+/* the "Attach" button next to the comment box; the real file input stays hidden */
+.attach-button {
+    display: inline-flex; align-items: center; flex-shrink: 0;
+    height: 44px; padding: 0 14px; max-width: 160px;
+    border: 1px solid var(--border); border-radius: 10px; background: #fff;
+    color: var(--muted); font-size: 12px; font-weight: 700; cursor: pointer;
+    transition: border-color .2s ease, color .2s ease;
+}
+.attach-button span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.attach-button:hover, .attach-button.has-file { border-color: var(--purple); color: var(--purple-dark); }
+.comment-form .attach-input {
+    flex: none; width: 1px; height: 1px; padding: 0; border: 0;
+    position: absolute; opacity: 0; pointer-events: none;
+}
+@media (max-width: 650px) { .attach-button { max-width: none; justify-content: center; } }

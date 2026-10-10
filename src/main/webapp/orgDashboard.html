@@ -6,6 +6,7 @@
     <title>ObligeU - Organization</title>
     <link rel="stylesheet" type="text/css" href="obligeU.css">
     <link rel="stylesheet" type="text/css" href="orgDashboard.css">
+    <link rel="stylesheet" type="text/css" href="extras.css">
 </head>
 
 <body>
@@ -39,6 +40,9 @@
             </button>
             <button class="nav-item" data-page="queue" type="button">
                 <span class="nav-icon">◉</span> Virtual Help Queue
+            </button>
+            <button class="nav-item" data-page="announcements" type="button">
+                <span class="nav-icon">✎</span> Post News
             </button>
         </nav>
 
@@ -106,7 +110,7 @@
                     <div class="stat-card purple-card">
                         <div class="stat-icon">?</div>
                         <span>Open Feedback Requests</span>
-                        <strong>7</strong>
+                        <strong id="statOpenFeedback">0</strong>
                         <small>Waiting for an answer</small>
                     </div>
                     <div class="stat-card green-card">
@@ -124,7 +128,7 @@
                     <div class="stat-card yellow-card">
                         <div class="stat-icon">▥</div>
                         <span>Presentations</span>
-                        <strong id="statPresentations">12</strong>
+                        <strong id="statPresentations">0</strong>
                         <small>Published for students</small>
                     </div>
                 </div>
@@ -140,24 +144,7 @@
                             <button class="view-button" data-page="feedback" type="button">View All</button>
                         </div>
 
-                        <div class="announcement-list">
-                            <button class="announcement-item pink-item" data-page="feedback" type="button">
-                                <div class="announcement-date"><strong>2</strong><span>HRS</span></div>
-                                <div>
-                                    <strong>Java ArrayList</strong>
-                                    <p>Nicola needs feedback on looping through a list.</p>
-                                </div>
-                                <span class="arrow">›</span>
-                            </button>
-                            <button class="announcement-item purple-item" data-page="feedback" type="button">
-                                <div class="announcement-date"><strong>5</strong><span>HRS</span></div>
-                                <div>
-                                    <strong>SQL Joins</strong>
-                                    <p>Jae is unsure which join to use.</p>
-                                </div>
-                                <span class="arrow">›</span>
-                            </button>
-                        </div>
+                        <div class="announcement-list" id="latestFeedbackList"></div>
                     </div>
 
                     <div class="panel">
@@ -201,57 +188,7 @@
                     <p>Every member can see these requests, and anyone can answer.</p>
                 </div>
 
-                <article class="thread">
-                    <div class="thread-head">
-                        <div class="thread-avatar">N</div>
-                        <div class="thread-meta">
-                            <strong>Nicola</strong>
-                            <span class="chip student">Student</span>
-                            <small>2 hours ago</small>
-                        </div>
-                        <span class="status pending">Open</span>
-                    </div>
-                    <p class="thread-text">I read the ArrayList presentation but I am still not sure how to loop through my list when items get added later. Can someone check my approach?</p>
-                    <div class="thread-tags">
-                        <span class="chip topic">Java ArrayList</span>
-                        <span class="comment-count">1 comment</span>
-                    </div>
-                    <div class="comment-list">
-                        <div class="comment">
-                            <div class="thread-avatar small">A</div>
-                            <div>
-                                <div class="comment-meta"><strong>Ana P.</strong><span class="chip member">Organization Member</span><small>20 min ago</small></div>
-                                <p>Slide 7 of the presentation has a full example of looping with size().</p>
-                            </div>
-                        </div>
-                    </div>
-                    <form class="comment-form">
-                        <input type="text" placeholder="Write a comment..." required>
-                        <button type="submit" class="submit-button">Comment</button>
-                    </form>
-                </article>
-
-                <article class="thread">
-                    <div class="thread-head">
-                        <div class="thread-avatar">J</div>
-                        <div class="thread-meta">
-                            <strong>Jae</strong>
-                            <span class="chip student">Student</span>
-                            <small>5 hours ago</small>
-                        </div>
-                        <span class="status pending">Open</span>
-                    </div>
-                    <p class="thread-text">When should I use a LEFT JOIN instead of an INNER JOIN? My results keep missing some rows.</p>
-                    <div class="thread-tags">
-                        <span class="chip topic">SQL Joins</span>
-                        <span class="comment-count">0 comments</span>
-                    </div>
-                    <div class="comment-list"></div>
-                    <form class="comment-form">
-                        <input type="text" placeholder="Write a comment..." required>
-                        <button type="submit" class="submit-button">Comment</button>
-                    </form>
-                </article>
+                <div id="feedbackList"></div>
 
             </div>
 
@@ -288,6 +225,8 @@
                                     <option>Database</option>
                                     <option>Mathematics</option>
                                     <option>Web Development</option>
+                                <option>Computer Science</option>
+                                    <option>Other</option>
                                 </select>
                             </div>
                         </div>
@@ -296,42 +235,14 @@
                             <input type="text" id="presKeywords" placeholder="arraylist, list, collections" required>
                         </div>
                         <div class="field">
-                            <label for="presFile">Slides (.pptx)</label>
-                            <input type="file" id="presFile" accept=".ppt,.pptx" required>
+                            <label for="presFile">File (.pptx, .ppt, .pdf, .docx, .doc, max 25 MB)</label>
+                            <input type="file" id="presFile" accept=".ppt,.pptx,.pdf,.doc,.docx" required>
                         </div>
                         <button type="submit" class="submit-button green-submit">Publish presentation</button>
                     </form>
                 </div>
 
-                <div class="materials-grid" id="presentationGrid">
-                    <div class="material-card">
-                        <div class="material-top purple-material"><span>CS</span></div>
-                        <div class="material-body">
-                            <span>PROGRAMMING</span>
-                            <h3>Java ArrayList</h3>
-                            <p>12 slides. Adding, reading and looping.</p>
-                            <button class="material-button" type="button">Edit</button>
-                        </div>
-                    </div>
-                    <div class="material-card">
-                        <div class="material-top green-material"><span>DB</span></div>
-                        <div class="material-body">
-                            <span>DATABASE</span>
-                            <h3>SQL Fundamentals</h3>
-                            <p>18 slides. Queries, tables and joins.</p>
-                            <button class="material-button" type="button">Edit</button>
-                        </div>
-                    </div>
-                    <div class="material-card">
-                        <div class="material-top pink-material"><span>DS</span></div>
-                        <div class="material-body">
-                            <span>MATHEMATICS</span>
-                            <h3>Probability Reviewer</h3>
-                            <p>9 slides. Sample spaces and events.</p>
-                            <button class="material-button" type="button">Edit</button>
-                        </div>
-                    </div>
-                </div>
+                <div class="materials-grid" id="presentationGrid"></div>
 
             </div>
 
@@ -346,32 +257,79 @@
                 </div>
 
                 <div class="panel">
-                    <div class="request-table">
+                    <div class="request-table" id="queueTable">
                         <div class="request-row table-header">
                             <span>Request</span>
                             <span>Topic</span>
                             <span>Waiting</span>
                             <span>Action</span>
                         </div>
-                        <div class="request-row">
-                            <span>Anonymous student #1042</span>
-                            <span>Database normalization</span>
-                            <span>12 min</span>
-                            <button class="view-button join-call" type="button">Join call</button>
-                        </div>
-                        <div class="request-row">
-                            <span>Anonymous student #1043</span>
-                            <span>Java inheritance</span>
-                            <span>8 min</span>
-                            <button class="view-button join-call" type="button">Join call</button>
-                        </div>
-                        <div class="request-row">
-                            <span>Anonymous student #1044</span>
-                            <span>Probability exercise</span>
-                            <span>3 min</span>
-                            <button class="view-button join-call" type="button">Join call</button>
+                        <!-- rows are filled in by orgDashboard.js -->
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- POST NEWS (only organization members can see and use this) -->
+            <div id="announcementsSection" class="content-section">
+
+                <div class="section-header">
+                    <span class="panel-label">ORGANIZATION ONLY</span>
+                    <h1>Post News</h1>
+                    <p>Announcements you post here appear on every student's Bulletin Board.</p>
+                </div>
+
+                <div class="form-card offer-card">
+                    <div class="offer-intro">
+                        <div class="big-icon">✎</div>
+                        <div>
+                            <h2>New Announcement</h2>
+                            <p>Only organization members can post. Students can read it.</p>
                         </div>
                     </div>
+
+                    <form id="announcementForm">
+                        <div class="form-grid">
+                            <div class="field">
+                                <label for="annTitle">Title</label>
+                                <input type="text" id="annTitle" maxlength="150" placeholder="Example: Midterm Examination Schedule" required>
+                            </div>
+                            <div class="field">
+                                <label for="annCategory">Category</label>
+                                <select id="annCategory" required>
+                                    <option value="">Select category</option>
+                                    <option>Academic</option>
+                                    <option>System</option>
+                                    <option>Virtual Help</option>
+                                    <option>Reminder</option>
+                                    <option>Event</option>
+                                </select>
+                            </div>
+                        </div>
+                            <div class="form-grid">
+                                <div class="field">
+                                    <label for="annEventDate">Event Date</label>
+                                    <input type="date" id="annEventDate" required>
+                                </div>
+                        </div>
+                        
+                        <div class="field">
+                            <label for="annBody">Message</label>
+                            <textarea id="annBody" placeholder="Write the announcement..." required></textarea>
+                        </div>
+                        <button type="submit" class="submit-button green-submit">Post announcement</button>
+                    </form>
+                </div>
+
+                <div class="panel" style="margin-top:18px; max-width:900px;">
+                    <div class="panel-heading">
+                        <div>
+                            <span class="panel-label">ALREADY POSTED</span>
+                            <h2>Recent Announcements</h2>
+                        </div>
+                    </div>
+                    <div class="announcement-list" id="orgAnnouncementList"></div>
                 </div>
 
             </div>

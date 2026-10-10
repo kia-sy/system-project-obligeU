@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ObligeU</title>
     <link rel="stylesheet" type="text/css" href="obligeU.css">
+    <link rel="stylesheet" type="text/css" href="studentDashboard.css">
+    <link rel="stylesheet" type="text/css" href="extras.css">
 </head>
 
 <body>
@@ -19,7 +21,7 @@
 >
 
     <!-- SIDEBAR -->
-    <aside class="sidebar">
+    <aside class="sidebar"> 
 
         <div class="sidebar-logo">
 
@@ -103,14 +105,14 @@
 
             <button
                 class="nav-item"
-                data-page="offer"
+                data-page="feedback"
             >
 
                 <span class="nav-icon">
-                    +
+                    ✎
                 </span>
 
-                Offer Help
+                Feedback Board
 
             </button>
 
@@ -129,21 +131,7 @@
             </button>
 
 
-            <button
-                class="nav-item"
-                data-page="materials"
-            >
-
-                <span class="nav-icon">
-                    ▥
-                </span>
-
-                Learning Materials
-
-            </button>
-
-
-            <button
+                        <button
                 class="nav-item"
                 data-page="requests"
             >
@@ -369,21 +357,22 @@
 
                             <button
                                 class="quick-action offer-action"
-                                data-page="offer"
+                                type="button"
+                                data-upload
                             >
 
                                 <span>
-                                    +
+                                    ↑
                                 </span>
 
                                 <div>
 
                                     <strong>
-                                        Offer Help
+                                        Upload a File
                                     </strong>
 
                                     <small>
-                                        Share something you know.
+                                        Share notes or slides with others.
                                     </small>
 
                                 </div>
@@ -456,113 +445,7 @@
 
                         <div class="announcement-list">
 
-                            <button
-                                class="announcement-item pink-item"
-                                data-announcement="Virtual Help Schedule"
-                            >
-
-                                <div class="announcement-date">
-
-                                    <strong>
-                                        25
-                                    </strong>
-
-                                    <span>
-                                        SEP
-                                    </span>
-
-                                </div>
-
-                                <div>
-
-                                    <strong>
-                                        Virtual Help Schedule
-                                    </strong>
-
-                                    <p>
-                                        New schedules available.
-                                    </p>
-
-                                </div>
-
-                                <span class="arrow">
-                                    →
-                                </span>
-
-                            </button>
-
-
-                            <button
-                                class="announcement-item purple-item"
-                                data-announcement="Midterm Examination Schedule"
-                            >
-
-                                <div class="announcement-date">
-
-                                    <strong>
-                                        28
-                                    </strong>
-
-                                    <span>
-                                        SEP
-                                    </span>
-
-                                </div>
-
-                                <div>
-
-                                    <strong>
-                                        Midterm Examination
-                                    </strong>
-
-                                    <p>
-                                        Updated exam schedule.
-                                    </p>
-
-                                </div>
-
-                                <span class="arrow">
-                                    →
-                                </span>
-
-                            </button>
-
-
-                            <button
-                                class="announcement-item green-item"
-                                data-announcement="Learning Materials Update"
-                            >
-
-                                <div class="announcement-date">
-
-                                    <strong>
-                                        27
-                                    </strong>
-
-                                    <span>
-                                        SEP
-                                    </span>
-
-                                </div>
-
-                                <div>
-
-                                    <strong>
-                                        Learning Materials
-                                    </strong>
-
-                                    <p>
-                                        New resources added.
-                                    </p>
-
-                                </div>
-
-                                <span class="arrow">
-                                    →
-                                </span>
-
-                            </button>
-
+                            
                         </div>
 
                     </div>
@@ -620,69 +503,6 @@
 
                         </div>
 
-
-                        <div class="request-row">
-
-                            <span>
-                                Database Normalization
-                            </span>
-
-                            <span>
-                                Database
-                            </span>
-
-                            <span>
-                                Sep 27
-                            </span>
-
-                            <span class="status pending">
-                                Pending
-                            </span>
-
-                        </div>
-
-
-                        <div class="request-row">
-
-                            <span>
-                                Java ArrayList
-                            </span>
-
-                            <span>
-                                Programming
-                            </span>
-
-                            <span>
-                                Sep 24
-                            </span>
-
-                            <span class="status resolved">
-                                Resolved
-                            </span>
-
-                        </div>
-
-
-                        <div class="request-row">
-
-                            <span>
-                                Probability Exercise
-                            </span>
-
-                            <span>
-                                Mathematics
-                            </span>
-
-                            <span>
-                                Sep 21
-                            </span>
-
-                            <span class="status resolved">
-                                Resolved
-                            </span>
-
-                        </div>
-
                     </div>
 
                 </div>
@@ -732,154 +552,7 @@
                 </div>
 
 
-                <div class="bulletin-grid">
-
-
-                    <!-- ANNOUNCEMENT 1 -->
-                    <article
-                        class="large-announcement announcement-purple"
-                    >
-
-                        <span class="announcement-tag">
-                            ACADEMIC
-                        </span>
-
-                        <h2>
-                            Midterm Examination Schedule
-                        </h2>
-
-                        <p>
-                            The updated examination schedule is now available.
-                            Students are encouraged to check their subjects,
-                            dates, and assigned rooms.
-                        </p>
-
-                        <div class="announcement-footer">
-
-                            <span>
-                                September 28, 2026
-                            </span>
-
-                            <button
-                                class="read-button"
-                                data-announcement="Midterm Examination Schedule"
-                            >
-                                Read More
-                            </button>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- ANNOUNCEMENT 2 -->
-                    <article
-                        class="large-announcement announcement-green"
-                    >
-
-                        <span class="announcement-tag">
-                            SYSTEM
-                        </span>
-
-                        <h2>
-                            Learning Materials Update
-                        </h2>
-
-                        <p>
-                            New learning materials have been added to the
-                            system for selected Computer Science subjects.
-                        </p>
-
-                        <div class="announcement-footer">
-
-                            <span>
-                                September 27, 2026
-                            </span>
-
-                            <button
-                                class="read-button"
-                                data-announcement="Learning Materials Update"
-                            >
-                                Read More
-                            </button>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- ANNOUNCEMENT 3 -->
-                    <article
-                        class="large-announcement announcement-pink"
-                    >
-
-                        <span class="announcement-tag">
-                            VIRTUAL HELP
-                        </span>
-
-                        <h2>
-                            Virtual Help Schedule
-                        </h2>
-
-                        <p>
-                            New virtual help schedules are available for
-                            students who need assistance with selected topics.
-                        </p>
-
-                        <div class="announcement-footer">
-
-                            <span>
-                                September 25, 2026
-                            </span>
-
-                            <button
-                                class="read-button"
-                                data-announcement="Virtual Help Schedule"
-                            >
-                                Read More
-                            </button>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- ANNOUNCEMENT 4 -->
-                    <article
-                        class="large-announcement announcement-yellow"
-                    >
-
-                        <span class="announcement-tag">
-                            REMINDER
-                        </span>
-
-                        <h2>
-                            Keep Your Requests Organized
-                        </h2>
-
-                        <p>
-                            Please provide a clear topic and description when
-                            submitting a help request.
-                        </p>
-
-                        <div class="announcement-footer">
-
-                            <span>
-                                September 23, 2026
-                            </span>
-
-                            <button
-                                class="read-button"
-                                data-announcement="Keep Your Requests Organized"
-                            >
-                                Read More
-                            </button>
-
-                        </div>
-
-                    </article>
-
-                </div>
+                <div class="bulletin-grid"></div>
 
             </div>
 
@@ -905,7 +578,7 @@
                     </h1>
 
                     <p>
-                        Tell the community what topic you need help with.
+                        Tell us what topic you need help with. We will look for files uploaded by students and organization members that match it.
                     </p>
 
                 </div>
@@ -1025,6 +698,8 @@
 
                     </form>
 
+                    <div id="helpResults" class="help-results" hidden></div>
+
                 </div>
 
             </div>
@@ -1032,144 +707,102 @@
 
 
             <!-- =================================================
-                 OFFER HELP
+                 FEEDBACK BOARD
                  ================================================= -->
 
             <div
-                id="offerSection"
+                id="feedbackSection"
                 class="content-section"
             >
 
                 <div class="section-header">
 
                     <span class="panel-label">
-                        SHARE YOUR KNOWLEDGE
+                        ASK THE COMMUNITY
                     </span>
 
                     <h1>
-                        Offer Help
+                        Feedback Board
                     </h1>
 
                     <p>
-                        Let other students know what topics you can help with.
+                        Ask for feedback on your work or your approach. Students and
+                        organization members can answer. Please keep it academic.
                     </p>
 
                 </div>
 
 
-                <div class="form-card offer-card">
+                <div class="form-card feedback-compose">
 
-                    <div class="offer-intro">
-
-                        <div class="big-icon">
-                            +
-                        </div>
-
-                        <div>
-
-                            <h2>
-                                Become a Student Helper
-                            </h2>
-
-                            <p>
-                                Share your knowledge with students who need
-                                guidance in subjects or topics you understand.
-                            </p>
-
-                        </div>
-
-                    </div>
-
-
-                    <form id="offerForm">
-
-                        <div class="form-grid">
-
-                            <div class="field">
-
-                                <label for="offerSubject">
-                                    Subject
-                                </label>
-
-                                <select
-                                    id="offerSubject"
-                                    required
-                                >
-
-                                    <option value="">
-                                        Select subject
-                                    </option>
-
-                                    <option>
-                                        Programming
-                                    </option>
-
-                                    <option>
-                                        Database
-                                    </option>
-
-                                    <option>
-                                        Mathematics
-                                    </option>
-
-                                    <option>
-                                        Web Development
-                                    </option>
-
-                                    <option>
-                                        Computer Science
-                                    </option>
-
-                                </select>
-
-                            </div>
-
-
-                            <div class="field">
-
-                                <label for="offerTopic">
-                                    Topic You Can Help With
-                                </label>
-
-                                <input
-                                    type="text"
-                                    id="offerTopic"
-                                    placeholder="Example: C++ Inheritance"
-                                    required
-                                >
-
-                            </div>
-
-                        </div>
-
+                    <form id="feedbackForm">
 
                         <div class="field">
 
-                            <label for="offerDescription">
-                                Short Description
+                            <label for="feedbackBody">
+                                What do you want feedback on?
                             </label>
 
                             <textarea
-                                id="offerDescription"
-                                placeholder="Describe what you can help students with..."
-                                required
+                                id="feedbackBody"
+                                maxlength="1000"
+                                placeholder="Describe your question or paste your approach..."
                             ></textarea>
 
                         </div>
 
+                        <div class="field">
+
+                            <label for="feedbackFile">
+                                Attach a picture or file (optional)
+                            </label>
+
+                            <input
+                                type="file"
+                                id="feedbackFile"
+                                class="file-input"
+                                accept=".png,.jpg,.jpeg,.gif,.webp,.pdf,.ppt,.pptx,.doc,.docx"
+                            >
+
+                            <label
+                                class="file-drop"
+                                for="feedbackFile"
+                            >
+
+                                <span class="file-drop-icon">↑</span>
+
+                                <span class="file-drop-text">
+
+                                    <strong id="feedbackFileName">
+                                        Choose a picture or file
+                                    </strong>
+
+                                    <small>
+                                        .png, .jpg, .gif, .webp, .pdf, .pptx, .docx · max 10 MB
+                                    </small>
+
+                                </span>
+
+                            </label>
+
+                        </div>
 
                         <button
                             type="submit"
-                            class="submit-button green-submit"
+                            class="submit-button"
                         >
-                            Submit Helper Profile
+                            Post to Feedback Board
                         </button>
 
                     </form>
 
                 </div>
 
+
+                <div id="feedbackList"></div>
+
             </div>
+
 
 
 
@@ -1379,236 +1012,17 @@
 
                 </div>
 
-            </div>
+            
+                <div class="request-card" style="margin-top: 22px;">
 
-
-
-            <!-- =================================================
-                 LEARNING MATERIALS
-                 ================================================= -->
-
-            <div
-                id="materialsSection"
-                class="content-section"
-            >
-
-                <div class="section-header">
-
-                    <span class="panel-label">
-                        STUDY RESOURCES
-                    </span>
-
-                    <h1>
-                        Learning Materials
-                    </h1>
-
-                    <p>
-                        Browse available study materials and references.
-                    </p>
-
-                </div>
-
-
-                <div class="subject-filter">
-
-                    <button
-                        class="material-filter active"
-                        data-filter="all"
-                        type="button"
-                    >
-                        All
-                    </button>
-
-                    <button
-                        class="material-filter"
-                        data-filter="programming"
-                        type="button"
-                    >
-                        Programming
-                    </button>
-
-                    <button
-                        class="material-filter"
-                        data-filter="database"
-                        type="button"
-                    >
-                        Database
-                    </button>
-
-                    <button
-                        class="material-filter"
-                        data-filter="math"
-                        type="button"
-                    >
-                        Mathematics
-                    </button>
-
-                    <button
-                        class="material-filter"
-                        data-filter="web"
-                        type="button"
-                    >
-                        Web Development
-                    </button>
-
-                </div>
-
-
-                <div class="materials-grid">
-
-
-                    <div
-                        class="material-card"
-                        data-category="programming"
-                    >
-
-                        <div class="material-top purple-material">
-                            <span>
-                                CS
-                            </span>
+                    <div class="request-card-header">
+                        <div>
+                            <span class="panel-label">YOUR SESSIONS</span>
+                            <h2>Virtual Help Sessions</h2>
                         </div>
-
-                        <div class="material-body">
-
-                            <span>
-                                OBJECT ORIENTED PROGRAMMING
-                            </span>
-
-                            <h3>
-                                Java ArrayList Guide
-                            </h3>
-
-                            <p>
-                                Basic concepts and examples for ArrayList.
-                            </p>
-
-                            <button
-                                class="material-button"
-                                type="button"
-                            >
-                                View Material
-                            </button>
-
-                        </div>
-
                     </div>
 
-
-                    <div
-                        class="material-card"
-                        data-category="database"
-                    >
-
-                        <div class="material-top green-material">
-
-                            <span>
-                                DB
-                            </span>
-
-                        </div>
-
-                        <div class="material-body">
-
-                            <span>
-                                ADVANCE DATABASE SYSTEM
-                            </span>
-
-                            <h3>
-                                SQL Fundamentals
-                            </h3>
-
-                            <p>
-                                SQL queries, tables, joins, and database basics.
-                            </p>
-
-                            <button
-                                class="material-button"
-                                type="button"
-                            >
-                                View Material
-                            </button>
-
-                        </div>
-
-                    </div>
-
-
-                    <div
-                        class="material-card"
-                        data-category="math"
-                    >
-
-                        <div class="material-top pink-material">
-
-                            <span>
-                                DS
-                            </span>
-
-                        </div>
-
-                        <div class="material-body">
-
-                            <span>
-                                DISCRETE STRUCTURE
-                            </span>
-
-                            <h3>
-                                Probability Reviewer
-                            </h3>
-
-                            <p>
-                                Sample spaces, events, and probability expressions.
-                            </p>
-
-                            <button
-                                class="material-button"
-                                type="button"
-                            >
-                                View Material
-                            </button>
-
-                        </div>
-
-                    </div>
-
-
-                    <div
-                        class="material-card"
-                        data-category="web"
-                    >
-
-                        <div class="material-top blue-material">
-
-                            <span>
-                                WEB
-                            </span>
-
-                        </div>
-
-                        <div class="material-body">
-
-                            <span>
-                                HUMAN COMPUTER INTERACTION
-                            </span>
-
-                            <h3>
-                                HTML & CSS Basics
-                            </h3>
-
-                            <p>
-                                Basic webpage structure and styling concepts.
-                            </p>
-
-                            <button
-                                class="material-button"
-                                type="button"
-                            >
-                                View Material
-                            </button>
-
-                        </div>
-
-                    </div>
+                    <div class="full-request-list" id="virtualList"></div>
 
                 </div>
 
@@ -1671,81 +1085,6 @@
 
 
                     <div class="full-request-list">
-
-
-                        <div class="full-request">
-
-                            <div class="request-topic-icon purple-bg">
-                                DB
-                            </div>
-
-                            <div class="request-info">
-
-                                <h3>
-                                    Advance Database System
-                                </h3>
-
-                                <span>
-                                    Database · September 27
-                                </span>
-
-                            </div>
-
-                            <span class="status pending">
-                                Pending
-                            </span>
-
-                        </div>
-
-
-                        <div class="full-request">
-
-                            <div class="request-topic-icon green-bg">
-                                JA
-                            </div>
-
-                            <div class="request-info">
-
-                                <h3>
-                                    Java ArrayList
-                                </h3>
-
-                                <span>
-                                    Programming · September 24
-                                </span>
-
-                            </div>
-
-                            <span class="status resolved">
-                                Resolved
-                            </span>
-
-                        </div>
-
-
-                        <div class="full-request">
-
-                            <div class="request-topic-icon pink-bg">
-                                PR
-                            </div>
-
-                            <div class="request-info">
-
-                                <h3>
-                                    Discrete Structure
-                                </h3>
-
-                                <span>
-                                    Mathematics · September 21
-                                </span>
-
-                            </div>
-
-                            <span class="status resolved">
-                                Resolved
-                            </span>
-
-                        </div>
 
                     </div>
 
@@ -1884,7 +1223,7 @@
                                 REQUESTS
                             </span>
 
-                            <strong>
+                            <strong id="statRequests">
                                 3
                             </strong>
 
@@ -1897,7 +1236,7 @@
                                 RESOLVED
                             </span>
 
-                            <strong>
+                            <strong id="statResolved">
                                 2
                             </strong>
 
@@ -1976,6 +1315,154 @@
 
 
 <!-- =========================================================
+     UPLOAD A FILE
+     ========================================================= -->
+
+<div
+    id="uploadModal"
+    class="modal-overlay"
+>
+
+    <div class="announcement-modal upload-modal">
+
+        <button
+            class="modal-close"
+            id="closeUpload"
+            type="button"
+            aria-label="Close upload"
+        >
+            ×
+        </button>
+
+        <span class="panel-label">
+            SHARE YOUR KNOWLEDGE
+        </span>
+
+        <h2>
+            Upload a File
+        </h2>
+
+        <p>
+            Add notes, slides or a document. When someone asks for help on a
+            matching topic, your file is shown to them.
+        </p>
+
+        <form id="uploadForm">
+
+            <div class="form-grid">
+
+                <div class="field">
+
+                    <label for="uploadTitle">
+                        Title
+                    </label>
+
+                    <input
+                        type="text"
+                        id="uploadTitle"
+                        maxlength="150"
+                        placeholder="Example: Java ArrayList"
+                        required
+                    >
+
+                </div>
+
+                <div class="field">
+
+                    <label for="uploadSubject">
+                        Subject
+                    </label>
+
+                    <select
+                        id="uploadSubject"
+                        required
+                    >
+
+                        <option value="">
+                            Select subject
+                        </option>
+
+                        <option>Programming</option>
+                        <option>Database</option>
+                        <option>Mathematics</option>
+                        <option>Web Development</option>
+                        <option>Computer Science</option>
+                        <option>Other</option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+            <div class="field">
+
+                <label for="uploadKeywords">
+                    Keywords for matching
+                </label>
+
+                <input
+                    type="text"
+                    id="uploadKeywords"
+                    placeholder="arraylist, list, collections"
+                    required
+                >
+
+            </div>
+
+            <div class="field">
+
+                <label for="uploadFile">
+                    File
+                </label>
+
+                <input
+                    type="file"
+                    id="uploadFile"
+                    class="file-input"
+                    accept=".ppt,.pptx,.pdf,.doc,.docx"
+                    required
+                >
+
+                <label
+                    class="file-drop"
+                    for="uploadFile"
+                >
+
+                    <span class="file-drop-icon">↑</span>
+
+                    <span class="file-drop-text">
+
+                        <strong id="uploadFileName">
+                            Choose a file
+                        </strong>
+
+                        <small>
+                            .pptx, .ppt, .pdf, .docx, .doc · max 25 MB
+                        </small>
+
+                    </span>
+
+                </label>
+
+            </div>
+
+            <button
+                type="submit"
+                class="submit-button green-submit"
+            >
+                Upload File
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================================================
      NOTIFICATIONS
      ========================================================= -->
 
@@ -2006,25 +1493,6 @@
         >
             ×
         </button>
-
-    </div>
-
-
-    <div class="notification-item">
-
-        <span class="notification-dot purple-dot"></span>
-
-        <div>
-
-            <strong>
-                New learning material
-            </strong>
-
-            <p>
-                SQL Fundamentals has been added.
-            </p>
-
-        </div>
 
     </div>
 

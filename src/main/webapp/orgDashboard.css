@@ -159,3 +159,57 @@
         flex-direction: column;
     }
 }
+
+/* Recent Announcements list: room for the Delete button */
+#orgAnnouncementList .announcement-item {
+    grid-template-columns: 49px 1fr auto;
+}
+
+.delete-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+
+    border: 1px solid rgba(224, 63, 79, .25);
+    background: #fff;
+    color: var(--pink-dark);
+    border-radius: 999px;
+    padding: 8px 14px;
+
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .3px;
+    cursor: pointer;
+
+    transition: background .2s ease, color .2s ease,
+                border-color .2s ease, transform .2s ease,
+                box-shadow .2s ease;
+}
+
+/* little trash-can icon, takes the button's text colour */
+.delete-button::before {
+    content: "";
+    width: 13px;
+    height: 13px;
+    background: currentColor;
+    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 6h18M8 6V4h8v2M6 6l1 14h10l1-14M10 11v6M14 11v6'/%3E%3C/svg%3E") center / contain no-repeat;
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 6h18M8 6V4h8v2M6 6l1 14h10l1-14M10 11v6M14 11v6'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+
+.delete-button:hover {
+    background: var(--pink-dark);
+    border-color: var(--pink-dark);
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(224, 63, 79, .28);
+}
+
+.delete-button:active {
+    transform: scale(.96);
+    box-shadow: none;
+}
+
+.delete-button:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(224, 63, 79, .2);
+}
